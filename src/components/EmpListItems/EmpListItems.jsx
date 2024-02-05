@@ -1,10 +1,23 @@
 import './EmpListItem.css'
 
-const EmpListItems = () => {
+const EmpListItems = (props) => {
+  const { name, surname, salary, increase } = props
+
+  let classes = 'list-group-item d-flex justify-content-between'
+  if (increase) {
+    classes += ' increase'
+  }
+
   return (
-    <li className="list-group-item d-flex justify-content-between">
-      <span className="list-group-item-label">name</span>
-      <input type="text" className="list-group-item-input" defaultValue="10$" />
+    <li className={classes}>
+      <span className="list-group-item-label">
+        {name} {surname}
+      </span>
+      <input
+        type="text"
+        className="list-group-item-input"
+        value={salary + '$'}
+      />
       <div className="d-flex justify-content-center align-items-center">
         <button type="button" className="btn-cookie btn-sm">
           <i className="fas fa-cookie"></i>

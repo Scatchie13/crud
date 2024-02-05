@@ -1,12 +1,12 @@
 import EmpListItems from '../EmpListItems/EmpListItems'
 import './EmpList.css'
 
-const EmpList = () => {
+const EmpList = ({ data }) => {
   return (
     <ul className="app-list list-group">
-      <EmpListItems />
-      <EmpListItems />
-      <EmpListItems />
+      {data.map((el) => (
+        <EmpListItems {...el} />
+      ))}
     </ul>
   )
 }
