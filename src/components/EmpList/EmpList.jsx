@@ -5,7 +5,12 @@ const EmpList = ({ data }) => {
   return (
     <ul className="app-list list-group">
       {data.map((el) => (
-        <EmpListItems {...el} />
+        <EmpListItems
+          name={el.name}
+          surname={el.surname}
+          salary={el.salary}
+          key={el.id}
+        />
       ))}
     </ul>
   )
