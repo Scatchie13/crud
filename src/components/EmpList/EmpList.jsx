@@ -2,7 +2,6 @@ import EmpListItems from '../EmpListItems/EmpListItems'
 import './EmpList.css'
 
 const EmpList = ({ data }) => {
-  console.log(data)
   return (
     <ul className="app-list list-group">
       {data.map((el, id) => (

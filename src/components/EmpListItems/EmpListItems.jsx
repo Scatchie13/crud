@@ -24,7 +24,7 @@ const EmpListItems = (props) => {
 
   return (
     <li className={classes}>
-      <span onClick={onStar} className="list-group-item-label">
+      <span onDoubleClick={onStar} className="list-group-item-label">
         {name} {surname}
       </span>
       <input
