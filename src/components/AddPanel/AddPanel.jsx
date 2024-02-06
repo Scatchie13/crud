@@ -1,28 +1,10 @@
-import { useState } from 'react'
-
 import './AddPanel.css'
 
-const AddPanel = () => {
-  const [name, setName] = useState('')
-  const [salary, setSalary] = useState('')
-
-  const onValueChange = (e) => {
-    e.preventDefault()
-    setName(e.target.value)
-
-    console.log(name)
-  }
-
-  const onSalaryChange = (e) => {
-    e.preventDefault()
-    setSalary(e.target.value)
-    console.log(salary)
-  }
-
+const AddPanel = ({ addUser, onSalaryChange, onValueChange, name, salary }) => {
   return (
     <div className="app-add-form">
       <h3>Add new employees</h3>
-      <form className="add-form d-flex">
+      <form onSubmit={addUser} className="add-form d-flex">
         <input
           type="text"
           value={name}
