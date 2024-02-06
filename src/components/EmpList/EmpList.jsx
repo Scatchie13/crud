@@ -2,14 +2,16 @@ import EmpListItems from '../EmpListItems/EmpListItems'
 import './EmpList.css'
 
 const EmpList = ({ data }) => {
+  console.log(data)
   return (
     <ul className="app-list list-group">
-      {data.map((el) => (
+      {data.map((el, id) => (
         <EmpListItems
           name={el.name}
           surname={el.surname}
           salary={el.salary}
-          key={el.id}
+          key={id}
+          increase={el.increase}
         />
       ))}
     </ul>
