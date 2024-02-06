@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './EmpListItem.css'
 
 const EmpListItems = (props) => {
-  const { name, surname, salary } = props
+  const { name, surname, salary, onDelete } = props
   const [increaseHandle, setIncreaseHandle] = useState(false)
   const [star, setStar] = useState(false)
 
@@ -40,7 +40,7 @@ const EmpListItems = (props) => {
         >
           <i className="fas fa-cookie"></i>
         </button>
-        <button type="button" className="btn-trash btn-sm">
+        <button onClick={onDelete} type="button" className="btn-trash btn-sm">
           <i className="fas fa-trash"></i>
         </button>
         <i className="fas fa-star"></i>

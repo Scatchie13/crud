@@ -5,6 +5,7 @@ const data = [
     salary: 2000,
     increase: true,
     star: false,
+    id: 1,
   },
   {
     name: 'Bi',
@@ -12,6 +13,7 @@ const data = [
     salary: 1400,
     increase: true,
     star: false,
+    id: 2,
   },
   {
     name: 'Vlud',
@@ -19,6 +21,7 @@ const data = [
     salary: 1800,
     increase: false,
     star: false,
+    id: 3,
   },
   {
     name: 'Vlad',
@@ -26,6 +29,7 @@ const data = [
     salary: 1800,
     increase: false,
     star: false,
+    id: 4,
   },
 ]
 
